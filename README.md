@@ -8,8 +8,8 @@ Your project description goes here. What problem did you solve? How did you solv
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
-[] create jquery, style.css, client.js, index.html
-[] source files and put them in a server and public location
+[x] create jquery, style.css, client.js, index.html
+[x] source files and put them in a server and public location
 [] get server running
 [] update the .gitignore ?
 [] update html with input fields for numbers to be calc
