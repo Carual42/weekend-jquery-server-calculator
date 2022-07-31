@@ -2,26 +2,46 @@ $(document).ready(handleReady);
 
 function handleReady() {
   console.log("jquery is loaded!")
+  $('#plus').on('click', getPlus);
+  $('#minus').on('click', getMinus);
+  $('#times').on('click', getTimes);
+  $('#divide').on('click', getDivide);
+  sendMath();
+}
+
+// functions to get math operator
+let mathOp = ''
+function getPlus() {
+    mathOp = a + b;
+    return mathOp;
+}
+function getMinus() {
+    mathOp = a - b;
+    return mathOp;
+}
+function getTimes() {
+    mathOp = a * b;
+    return mathOp;
+}
+function getDivide() {
+    mathOp = a / b;
+    return mathOp;
 }
 
 
-function sendGuessToServer() {
-    console.log('in sendGuessToServer');
-    numberOfGuesses++;
-    console.log('number of guesses:', numberOfGuesses);
+function sendMath() {
+    console.log('in sendMath');
   $.ajax({
     type:'POST',
-    url: '/guesses',
+    url: '/math',
     data: {
-      meaghan: $('#meaghan-input').val(),
-      brianna: $('#brianna-input').val(),
-      alex: $('#alex-input').val(),
-      holly: $('#holly-input').val(),
-      bryn: $('#bryn-input').val()
+      num1: $('#var-A').val(),
+      num2: $('#var-B').val(),
+      equation: mathOp
     }
   }).then(function (response) {
     console.log(response);
-    getGuesses();
+    ;
   });
   
   }
