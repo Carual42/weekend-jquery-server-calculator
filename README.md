@@ -10,7 +10,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 [x] create jquery, style.css, client.js, index.html
 [x] source files and put them in a server and public location
-[] get server running
+[x] get server running
 [] update the .gitignore ?
 [] update html with input fields for numbers to be calc
 [] update html with buttons that rep math operators
