@@ -13,7 +13,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] get server running
 [x] update the .gitignore ?
 [x] update html with input fields for numbers to be calc
-[] update html with buttons that rep math operators
+[x] update html with buttons that rep math operators
 [] add c button to lear input fields
 [] take val from input fields and bundle it into object, send to server
 [] come up with logic server side to deal with data bundle
