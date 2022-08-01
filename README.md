@@ -1,11 +1,10 @@
 # Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Server side calculator. this project took me roughly 8 hours total to produce.
 
 ## Description
 
 Your project description goes here. What problem did you solve? How did you solve it?
-
+This project is a calculator that takes info from client side and solves it server side. The biggest problem i ran into with this project was getting the operator to work in terms of math. to solve this problem i used a switch statement to match the operator with the correct equation. Then substituting variables "A" and "B" to output the correct solution.
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
 [x] create jquery, style.css, client.js, index.html
