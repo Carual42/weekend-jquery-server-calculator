@@ -11,16 +11,17 @@ app.use(express.static('server/public'));
 
 let mathProblems = []
 //for guess
-app.get('/mathProblem', (req, res) => {
-    solveMath(mathProblems)
-  res.send(mathAnswers);
-});
+// app.get('/mathProblem', (req, res) => {
+//     solveMath(mathProblems)
+//   res.send(mathAnswers);
+// });
 
 app.post('/math', (req, res) => {
   let mathProb = req.body;
   console.log('maaaatttthhh:', mathProb);
   mathProblems.push(mathProb)
   res.sendStatus(200);
+  solveMath(mathProblems);
 });
 
 
@@ -28,7 +29,24 @@ app.post('/math', (req, res) => {
 mathAnswers = []
 function solveMath(array) {
     for (let i = 0; i < array.length; i++) {
-let answer = (array[i].num1, array[i].equation, array[i].num2);
+let A = Number.parseInt(array[i].num1)
+let X = array[i].equation
+let B = Number.parseInt(array[i].num2);
+let answer = 0;
+switch (X) {
+    case '+':
+    answer = A + B;
+    break;
+    case '-':
+    answer = A - B;
+    break;
+    case '*':
+    answer = A * B;
+    break;
+    case '/':
+    answer = A / B;
+    break;
+}
 console.log(answer);
 mathAnswers.push(answer);
     }
