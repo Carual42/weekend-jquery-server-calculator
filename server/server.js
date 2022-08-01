@@ -10,12 +10,12 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static('server/public'));
 
 let mathProblems = []
-//for 
+// get request to solve the equation and push to dom?
 app.get('/math', (req, res) => {
     solveMath(mathProblems)
   res.send(mathAnswers);
 });
-
+// post request to add client data to an array
 app.post('/math', (req, res) => {
   let mathProb = req.body;
   console.log('maaaatttthhh:', mathProb);

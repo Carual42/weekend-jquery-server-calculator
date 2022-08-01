@@ -18,4 +18,5 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] take val from input fields and bundle it into object, send to server
 [x] come up with logic server side to deal with data bundle
 [x] develop history div on html
-[] append calc to history div
+[x] append calc to history div
+[x] clear button clears input fields
