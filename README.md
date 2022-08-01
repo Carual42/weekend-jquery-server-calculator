@@ -16,6 +16,6 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 [x] update html with buttons that rep math operators
 [x] add c button to clear input fields
 [x] take val from input fields and bundle it into object, send to server
-[] come up with logic server side to deal with data bundle
+[x] come up with logic server side to deal with data bundle
 [] develop history div on html
 [] append calc to history div
