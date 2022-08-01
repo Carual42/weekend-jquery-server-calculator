@@ -41,23 +41,23 @@ function sendMath() {
     }
   }).then(function (response) {
     console.log(response);
-    // displayMath();
+    displayMath();
   });
   }
 
-//   function displayMath() {
-//     $.ajax({
-//         type: 'GET',
-//         url: '/mathProblem'
-//     }).then(function (response) {
-//       $('#math-history').empty();
-//       $('#math-history').append(`
-//       <h3>Calculator History</h3>
-//       `)
-//       for (let i = 0; i < response.length; i++) {
-//         $('#content').append(`
-//           <h2>Meaghan's Guess: ${response[i]}</h2>
-//         `);
-//       }
-//     });
-//   }
+  function displayMath() {
+    $.ajax({
+        type: 'GET',
+        url: '/math'
+    }).then(function (response) {
+      $('#math-history').empty();
+      $('#math-history').append(`
+      <h3>Calculator History</h3>
+      `)
+      for (let i = 0; i < response.length; i++) {
+        $('#math-history').append(`
+          <h2>${response[i].A} ${response[i].X} ${response[i].B} = ${response[i].answer}</h2>
+        `);
+      }
+    });
+  }

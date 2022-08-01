@@ -10,18 +10,17 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static('server/public'));
 
 let mathProblems = []
-//for guess
-// app.get('/mathProblem', (req, res) => {
-//     solveMath(mathProblems)
-//   res.send(mathAnswers);
-// });
+//for 
+app.get('/math', (req, res) => {
+    solveMath(mathProblems)
+  res.send(mathAnswers);
+});
 
 app.post('/math', (req, res) => {
   let mathProb = req.body;
   console.log('maaaatttthhh:', mathProb);
   mathProblems.push(mathProb)
   res.sendStatus(200);
-  solveMath(mathProblems);
 });
 
 
@@ -48,7 +47,13 @@ switch (X) {
     break;
 }
 console.log(answer);
-mathAnswers.push(answer);
+let mathEquation = {
+    A: A,
+    B: B,
+    X: X,
+    answer: answer
+}
+mathAnswers.push(mathEquation);
     }
 }
 app.listen(PORT, () => {
