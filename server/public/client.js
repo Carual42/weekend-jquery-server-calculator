@@ -52,18 +52,22 @@ function sendMath() {
         type: 'GET',
         url: '/math'
     }).then(function (response) {
-        // not sure why this wont empty
+        console.log(response)
+        let latestAnswer = 0;
       $('#math-history').empty();
       $('#math-history').append(`
       <h3>Calculator History</h3>
-      <h3>${response.answer}<h3>
+      <h3>${response[latestAnswer].answer}<h3>
       `);
-      // cant figure out why it cant access the answer
+      // cant figure out why the answer wont update.
+      // seems liket the .empty() isnt working
       for (let i = 0; i < response.length; i++) {
         $('#math-history').append(`
           <h2>${response[i].A} ${response[i].X} ${response[i].B} = ${response[i].answer}</h2>
         `);
+        latestAnswer++;
       }
+        console.log(latestAnswer)
     });
   }
 
