@@ -54,6 +54,7 @@ let mathEquation = {
     answer: answer
 }
 mathAnswers.push(mathEquation);
+array.length = 0;
     }
 }
 app.listen(PORT, () => {
